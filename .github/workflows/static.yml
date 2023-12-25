@@ -38,15 +38,11 @@ jobs:
       - run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - name: Copy scripts
-        run: |
-          cp -r ./dist/cjs ./examples
-          cp ./assets/logo_small.jpg ./examples
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './examples'
+          path: './public'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
