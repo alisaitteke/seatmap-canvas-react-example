@@ -100,10 +100,10 @@ function App() {
         }
     }
 
-    // const getSelectedSeats = () => {
-    //     const selectedSeats = seatmapRef.current.getSelectedSeats()
-    //     console.log('selectedSeats', selectedSeats)
-    // }
+    const getSelectedSeats = () => {
+        const selectedSeats = seatmapRef.current.getSelectedSeats()
+        console.log('selectedSeats', selectedSeats)
+    }
 
     const zoomToBlock = (blockId) => {
         seatmapRef.current.zoomManager.zoomToBlock(blockId)
@@ -120,7 +120,7 @@ function App() {
     return (
         <div className="absolute flex flex-col w-screen h-screen">
             <div className="bg-[#ab1f34] flex justify-center border-b border-[#d05063]">
-                <img className="h-11 py-1" src="logo_small.jpg"/>
+                <img alt={'logo'} className="h-11 py-1" src="logo_small.jpg"/>
                 <div className="absolute h-12 right-3 flex flex-row gap-3 items-center content-center">
                     <a className="github-button" href="https://github.com/alisaitteke/seatmap-canvas/subscription"
                        data-icon="octicon-eye" aria-label="Watch alisaitteke/seatmap-canvas on GitHub">Watch</a>
@@ -141,6 +141,7 @@ function App() {
                             All Blocks
                         </button>
                         <button
+                            onClick={getSelectedSeats}
                             className="border text-left border-slate-500 bg-slate-100 text-slate-800 py-1 px-3 rounded-md hover:bg-slate-200"
                             id="get-selected-seats">
                             <i className="fa-solid fa-code mr-2"></i>
