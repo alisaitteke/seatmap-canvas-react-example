@@ -36,6 +36,8 @@ jobs:
           node-version: 18
       - run: yarn install
       - run: yarn build
+        env:
+          PUBLIC_URL: /seatmap-canvas-react-example
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
