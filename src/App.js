@@ -100,10 +100,10 @@ function App() {
         }
     }
 
-    const getSelectedSeats = () => {
-        const selectedSeats = seatmapRef.current.getSelectedSeats()
-        console.log('selectedSeats', selectedSeats)
-    }
+    // const getSelectedSeats = () => {
+    //     const selectedSeats = seatmapRef.current.getSelectedSeats()
+    //     console.log('selectedSeats', selectedSeats)
+    // }
 
     const zoomToBlock = (blockId) => {
         seatmapRef.current.zoomManager.zoomToBlock(blockId)
